@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="module" src="index.js"></script>
+    
+</head>
+<body>
+    <div>
+        <form id="login" action="">
+            <div>
+                <label for="user">Username</label>
+                <input type="text" name="username" id="user">
+            </div>
+            <div>
+                <label for="pass">Password</label>
+                <input type="password" name="password" id="pass">
+            </div>
+            <button id="login_button">Login</button>
+        </form>
+    </div>
+    
+
+    
+</body>
+</html>
+
+// index.js
+
+console.log(document.body.children);
+const allChild= document.body.children;
+
+const button=document.getElementById('login_button');
+const username=document.getElementById('user');
+const password=document.getElementById('pass');
+const form=document.getElementById('login');
+
+button.addEventListener('click',(event)=>{
+    console.log('click');
+})
+form.addEventListener('submit',(event)=>{
+    event.preventDefault();
+    console.log('submit',username.value,password.value);
+})
+
+
+
+
